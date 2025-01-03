@@ -1,5 +1,5 @@
 import '../scss/style.scss';
-import fileName from './path/to/filename';
+import '../scss/fonts.scss';
 
 
 console.log('It works!')
