@@ -1,46 +1,162 @@
-$bgColor: #24292e;
-$text: #fff;
-@import url(fonts.scss);
+
+@import '/src/scss/fonts.scss';
+@import '/src/scss/variables.scss';
+@import '/src/scss/mixins.scss';
+
 body {
+  padding: 0;
+  margin: 0;
   font-family: TT-Lakes;
+  background-color: #F8F8F8;
+  display: flex;
+  overflow-x: hidden;
+
 }
 
-aside {
-  float: left;
-  width: 300px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.sidebar {
+  
+  font-family: TT-Lakes;
   height: 100vh;
-  position: fixed;
+  color: #1B1C21;
+  width: 270px; 
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 2px solid #e0e0e0;
+  padding: 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  &__header {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+
+    &-phone {
+      font-family: $boldFont;
+      font-size: 24px;
+    }
+  }
+
+  &__menu {
+    padding-left: 20px;
+    width: 270px;
+
+    &-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 15;
+        margin: 0;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        li:hover {
+          
+          border-left: 4px solid $menuHoverColor;
+          color: #7E7E82;
+        }
+    }
+
+}
 }
 
-header {
+.header {
   align-items: center;
   justify-content: center;
+  padding-bottom: 0px;
+  font-family: $boldFont;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin: 30px;
+  border-left: 5px solid $menuHoverColor;
+  &__button {
+      font-family: TT-Lakes;
+      font-size: 16px;
+    border: none;
+    background-color: #F8F8F8;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+
 }
 
-nav {
+.navbar {
   top: 100%;
-  margin-left: 200px;
-  left: 0;
   width: 100%;
-  background-color: #f4f4f4;
   padding: 10px;
+  margin-left: 30px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
-}
-.navbar, header, .device-menu__cards {
+  border-bottom: 1px solid #ddd;  
   display: flex;
   flex-direction: row;
-  gap: 25px;
+  gap: 80px;
+  &__item:hover {
+    transition: 0.2s;
+    border: 3px solid $menuHoverColor;
+  }
 }
 
-.device-menu__cards {
-  gap: 20px;
+.device-menu {
+  margin-top: 20px;
+  @include heading-style;
+    &__cards {
+      display: flex;
+      justify-content: space-between
+
+    }
+    &__show-all {
+      display: flex;
+      align-items: center;
+      gap: 4px; 
+      background-color: transparent; 
+      border: none;                
+      color: #333;                
+      cursor: pointer;               
+      font-size: 14px;               
+      padding: 8px 16px;             
+      font-family: TT Lakes-Regular;
+    }
 }
 
-.brands-menu__cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4fr);
+.brands-menu {
+  @include heading-style;
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+  }
+  &__show-all {
+    display: flex;
+    align-items: center;
+    gap: 4px; 
+    background-color: transparent; 
+    border: none;                
+    color: #333;                
+    cursor: pointer;               
+    font-size: 14px;               
+    padding: 8px 16px;             
+    font-family: TT Lakes-Regular;
+  }
 }
 
 header {
@@ -49,10 +165,39 @@ header {
 }
 
 main {
-  margin-left: 200px; 
   padding: 20px;
   background-color: #fff;
   min-height: calc(100vh - 100px);
+}
+
+.description {
+  display: flex;
+
+  gap: 20px;
+
+  &__text {
+    flex: 1;
+    font-size: 16px;
+    max-width: 50%;
+  }
+  &__image img {
+    float: right;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__readmore {
+    display: flex;
+    align-items: center;
+    gap: 4px; 
+    background-color: transparent; 
+    border: none;                
+    color: #333;                
+    cursor: pointer;               
+    font-size: 14px;               
+    padding: 8px 16px;             
+    font-family: TT Lakes-Regular;
+  }
 }
 
 
@@ -100,7 +245,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ff4081;
+    background-color: $bgColor;
     color: #fff;
     border: none;
     border-radius: 40px;
@@ -145,3 +290,9 @@ main {
   }
 }
 
+footer {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

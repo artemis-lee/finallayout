@@ -11,184 +11,215 @@
     <link rel="stylesheet" href="scss/style.scss">
   </head>
   <body>
-  <header>
-    <h2>Услуги и сервисы</h2>
-    <button class="header__button">
-      Оставить заявку 
-      <img src="" alt="">
-    </button>
-    <button class="header__button">
-      Статус ремонта
-      <img src="" alt="">
-    </button>
-  </header>
-  <nav>
-    <div class="navbar">
-      <div class="nav__item">Ремонтируемые бренды</div>
-      <div class="nav__item">Дополнительные услуги</div>
-      <div class="nav__item">Цены на услуги</div>
-      <div class="nav__item">Адреса сервисных центров</div>
-      <div class="nav__item">Специальные цены</div>
-      <div class="nav__item">Отзывы</div>
-    </div>
-  </nav>
-  <aside>
-    <div class="aside__header">
-    <img src="img/aside/1.svg" alt="">
-    <img src="img/aside/2.svg" alt="">
-    </div>
-    <div class="aside__navbar">
-      <h3>Ремонт техники</h3>
-      <h3>Услуги и сервисы</h3>
-      <h3>Корпоративным клиентам</h3>
-      <h3>Продавцам техники</h3>
-      <h3>Партнерам</h3>
-      <h3>Производителям</h3>
-      <h3>Наши сервисные центры</h3>
-      <h3>Контакты</h3>
-    </div>
-  </aside>
-  <main>
-    <div class="description">
-      <div class="description__text">
-        Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. 
-        Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-        <button class="text__readmore">
-          <img src="" alt="">
-          <span></span>
+    <aside class="sidebar">
+      <div class="sidebar__header">
+        <div class="sidebar__header-image">
+          <img src="img/aside/1.svg" alt="">
+        </div>
+        <div class="sidebar__header-image">
+          <img src="img/aside/2.svg" alt="">
+        </div>
+      </div>
+      <div class="sidebar__menu">
+        <ul class="sidebar__menu-list">
+          <li><a href="#">Ремонт техники</a></li>
+          <li><a href="#">Услуги и сервисы</a></li>
+          <li><a href="#">Корпоративным клиентам</a></li>
+          <li><a href="#">Продавцам техники</a></li>
+          <li><a href="#">Партнерам</a></li>
+          <li><a href="#">Производителям</a></li>
+          <li><a href="#">Наши сервисные центры</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div>     
+       <div class="sidebar__contacts">
+          <div class="sidebar__contacts-icons">
+              <a href="#"><img src="img/aside/phone.svg" alt="Phone"></a>
+              <a href="#"><img src="img/aside/chat.svg" alt="Chat"></a>
+              <a href="#"><img src="img/aside/profile.svg" alt="Profile"></a>
+          </div>
+          <a href="#" class="email">mail@cps.com</a>
+          <div class="sidebar__contacts-phone">8 800 890 8900</div>
+          <div class="sidebar__contacts-languages">
+              <a href="#">RU</a>
+              <a href="#">EN</a>
+              <a href="#">CH</a>
+          </div>
+      </div>
+    </aside>
+    <section>
+      <header class="header">
+        <h2>Услуги и сервисы</h2>
+        <div class="header__buttons">
+          <button class="header__button">
+            <span>Оставить зяявку</span> 
+            <img src="img/header/3.svg" alt="">
+          </button>
+          <button class="header__button">
+            <span>Статус ремонта</span>
+            <img src="img/aside/2.svg" alt="">
+          </button>
+        </div>
+      </header>
+      <nav class="navbar">
+          <div class="navbar__item">Ремонтируемые бренды</div>
+          <div class="navbar__item">Дополнительные услуги</div>
+          <div class="navbar__item">Цены на услуги</div>
+          <div class="navbar__item">Адреса сервисных центров</div>
+          <div class="navbar__item">Специальные цены</div>
+          <div class="navbar__item">Отзывы</div>
+      </nav>
+      <main>
+        <div class="description">
+          <div class="description__text">
+            Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. 
+            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+            <button class="description__readmore">
+              <img class="icon" src="img/main/pointers.svg" alt="">
+              <span class="btn-text">Читать далее</span>
+          </button>
+          </div>
+          <div class="description__image">
+            <img src="img/main/5.svg" alt="">
+          </div>
+          <div class="content__image"></div>
+        </div>
+        <div class="brands-menu">
+          <h3>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ</h3>
+          <div class="brands-menu__cards">
+            <div class="brands-menu__item">
+              <img src="img/main/6.svg" alt="">
+            </div>
+            <div class="brands-menu__item">
+              <img src="img/main/7.svg" alt="">
+            </div>
+            <div class="brands-menu__item">
+              <img src="img/main/8.svg" alt="">
+            </div>
+            <div class="brands-menu__item">
+              <img src="img/main/9.svg" alt="">
+            </div>
+            <div class="brands-menu__item">
+              <img src="img/main/10.svg" alt="">
+            </div>
+            <div class="brands-menu__item">
+              <img src="img/main/11.svg" alt="">
+            </div>
+            <div class="brands-menu__item">
+              <img src="img/main/12.svg" alt="">
+            </div>
+            <div class="brands-menu__item">
+              <img src="img/main/13.svg" alt="">
+            </div>
+          </div>
+          <button onclick="toggleMenu()" class="brands-menu__show-all">
+            <img class="icon" src="img/main/pointers.svg" alt="">
+            <span class="btn-text">Показать все</span>
         </button>
+        </div>
+        <div class="device-menu">
+          <h3>РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h3>
+          <div class="device-menu__cards">
+            <div class="device-menu__item">
+              <img src="img/main/14.svg" alt="">
+            </div>
+            <div class="device-menu__item">
+              <img src="img/main/15.svg" alt="">
+            </div>
+            <div class="device-menu__item">
+              <img src="img/main/16.svg" alt="">
+            </div>
+            <div class="device-menu__item">
+              <img src="img/main/17.svg" alt="">
+            </div>
+          </div>
+          <button onclick="toggleMenu()" class="device-menu__show-all">
+            <img class="icon" src="img/main/pointers.svg" alt="">
+            <span class="btn-text">Показать все</span>
+        </button>
+        </div>
+        <div class="service-table">
+          <div class="service-table__header">
+            <div class="service-table__column">Ремонтные услуги</div>
+            <div class="service-table__column">Цена</div>
+            <div class="service-table__column">Срок</div>
+            <div class="service-table__column"></div>
+          </div>
+          <div class="service-table__row">
+            <div class="service-table__column">Диагностика</div>
+            <div class="service-table__column">Бесплатно</div>
+            <div class="service-table__column">30 мин</div>
+            <div class="service-table__column">
+              <button class="service-table__button">
+                <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                </svg>
+                Заказать
+              </button>
+            </div>
+          </div>
+          <div class="service-table__row">
+            <div class="service-table__column">Замена дисплея</div>
+            <div class="service-table__column">1 000 ₽</div>
+            <div class="service-table__column">30–120 мин</div>
+            <div class="service-table__column">
+              <button class="service-table__button">
+                <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                </svg>
+                Заказать
+              </button>
+            </div>
+          </div>
+          <div class="service-table__row">
+            <div class="service-table__column">Замена полиграфического динамика</div>
+            <div class="service-table__column">1 000 ₽</div>
+            <div class="service-table__column">30–120 мин</div>
+            <div class="service-table__column">
+              <button class="service-table__button">
+                <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                </svg>
+                Заказать
+              </button>
+            </div>
+          </div>
+          <div class="service-table__row">
+            <div class="service-table__column">Тестирование с выдачей технического заключения</div>
+            <div class="service-table__column">1 000 ₽</div>
+            <div class="service-table__column">30–120 мин</div>
+            <div class="service-table__column">
+              <button class="service-table__button">
+                <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                </svg>
+                Заказать
+              </button>
+            </div>
+          </div>
+          <div class="service-table__row">
+            <div class="service-table__column">Замена программного обеспечения</div>
+            <div class="service-table__column">1 000 ₽</div>
+            <div class="service-table__column">30–120 мин</div>
+            <div class="service-table__column">
+              <button class="service-table__button">
+                <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                </svg>
+                Заказать
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="table-comment">
+        <p>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+        <a href="#" class="btn-commercial">Получить коммерческое предложение <span>›</span></a>
+    
       </div>
-      <div class="content__image"></div>
-    </div>
-    <div class="brands-menu">
-      <h3>Ремонт техники различных брендов</h3>
-      <div class="brands-menu__cards">
-        <div class="brands-menu__item">
-          <img src="img/main/6.svg" alt="">
-        </div>
-        <div class="brands-menu__item">
-          <img src="img/main/7.svg" alt="">
-        </div>
-        <div class="brands-menu__item">
-          <img src="img/main/8.svg" alt="">
-        </div>
-        <div class="brands-menu__item">
-          <img src="img/main/9.svg" alt="">
-        </div>
-        <div class="brands-menu__item">
-          <img src="img/main/10.svg" alt="">
-        </div>
-        <div class="brands-menu__item">
-          <img src="img/main/11.svg" alt="">
-        </div>
-        <div class="brands-menu__item">
-          <img src="img/main/12.svg" alt="">
-        </div>
-        <div class="brands-menu__item">
-          <img src="img/main/13.svg" alt="">
-        </div>
+      </main>
+      <footer class="footer">
+      <div class="footer_item">(c) 2019 CPS
+        Разработано командой Apesong
       </div>
-      <button class="show-all">Показать все</button>
-    </div>
-    <div class="device-menu">
-      <h3>Ремонт различных видов техники</h3>
-      <div class="device-menu__cards">
-        <div class="device-menu__item">
-          <img src="img/main/14.svg" alt="">
-        </div>
-        <div class="device-menu__item">
-          <img src="img/main/15.svg" alt="">
-        </div>
-        <div class="device-menu__item">
-          <img src="img/main/16.svg" alt="">
-        </div>
-        <div class="device-menu__item">
-          <img src="img/main/17.svg" alt="">
-        </div>
-      </div>
-      <button class="show-all">Показать все</button>
-    </div>
-    <div class="service-table">
-      <div class="service-table__header">
-        <div class="service-table__column">Ремонтные услуги</div>
-        <div class="service-table__column">Цена</div>
-        <div class="service-table__column">Срок</div>
-        <div class="service-table__column"></div>
-      </div>
-      <div class="service-table__row">
-        <div class="service-table__column">Диагностика</div>
-        <div class="service-table__column">Бесплатно</div>
-        <div class="service-table__column">30 мин</div>
-        <div class="service-table__column">
-          <button class="service-table__button">
-            <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            </svg>
-            Заказать
-          </button>
-        </div>
-      </div>
-      <div class="service-table__row">
-        <div class="service-table__column">Замена дисплея</div>
-        <div class="service-table__column">1 000 ₽</div>
-        <div class="service-table__column">30–120 мин</div>
-        <div class="service-table__column">
-          <button class="service-table__button">
-            <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            </svg>
-            Заказать
-          </button>
-        </div>
-      </div>
-      <div class="service-table__row">
-        <div class="service-table__column">Замена полиграфического динамика</div>
-        <div class="service-table__column">1 000 ₽</div>
-        <div class="service-table__column">30–120 мин</div>
-        <div class="service-table__column">
-          <button class="service-table__button">
-            <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            </svg>
-            Заказать
-          </button>
-        </div>
-      </div>
-      <div class="service-table__row">
-        <div class="service-table__column">Тестирование с выдачей технического заключения</div>
-        <div class="service-table__column">1 000 ₽</div>
-        <div class="service-table__column">30–120 мин</div>
-        <div class="service-table__column">
-          <button class="service-table__button">
-            <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            </svg>
-            Заказать
-          </button>
-        </div>
-      </div>
-      <div class="service-table__row">
-        <div class="service-table__column">Замена программного обеспечения</div>
-        <div class="service-table__column">1 000 ₽</div>
-        <div class="service-table__column">30–120 мин</div>
-        <div class="service-table__column">
-          <button class="service-table__button">
-            <svg class="service-table__button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            </svg>
-            Заказать
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="table-comment">
-    <p>Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-    <a href="#" class="btn-commercial">Получить коммерческое предложение <span>›</span></a>
-
-  </div>
-  </main>
-  <footer>
-  <div class="footer_item">(c) 2019 CPS
-    Разработано командой Apesong
-  </div>
-  <div class="footer_item">Политика конфиденциальности</div>
-  <div class="footer_item">Информация, размещенная на данной странице не является публичной офертой</div>
-  </footer>
+      <div class="footer_item">Политика конфиденциальности</div>
+      <div class="footer_item">Информация, размещенная на данной странице не является публичной офертой</div>
+      </footer>
+    </section>
   <script src="js/index.js" defer></script>
   </body>
 </html>
