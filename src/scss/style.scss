@@ -10,7 +10,18 @@ body {
   background-color: #F8F8F8;
   display: flex;
   overflow-x: hidden;
+}
 
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.section {
+  display: flex;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 * {
@@ -46,6 +57,7 @@ body {
     display: flex;
     gap: 25px;
     flex-direction: column;
+    
 
     &-phone {
       font-family: $boldFont;
@@ -89,15 +101,26 @@ body {
   margin: 30px;
   border-left: 5px solid $menuHoverColor;
   &__button {
+    display: flex;
+    gap: 40px;
+    
       font-family: TT-Lakes;
       font-size: 16px;
-    border: none;
-    background-color: #F8F8F8;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
+      cursor: pointer;
+      background-color: #F8F8F8;
 
+      &-feedback, &-call {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        background: none;
+        border: none;
+        font-family: $basicFont;
+      }
+  
+  }
 }
 
 .navbar {
@@ -112,7 +135,7 @@ body {
   gap: 80px;
   &__item:hover {
     transition: 0.2s;
-    border: 3px solid $menuHoverColor;
+    border: 3px solid $navHoverColor;
   }
 }
 
@@ -144,6 +167,9 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
+    &__hidden {
+      display: none;
+    }
   }
   &__show-all {
     display: flex;
@@ -157,12 +183,9 @@ body {
     padding: 8px 16px;             
     font-family: TT Lakes-Regular;
   }
+
 }
 
-header {
-  text-align: center;
-  padding: 10px;
-}
 
 main {
   padding: 20px;
@@ -295,4 +318,108 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.popup__feedback {
+  display: none;
+  height: 100vh;
+  background-color: white;
+  gap: 40px;
+  padding-left: 20px;
+  overflow-x: hidden;
+  &-submit { 
+    color: white;
+    background-color: $bgColor;
+    height: 32px;
+    width: 136px;
+    border-radius: 30px;
+    margin-left: auto;
+    font-family: $boldFont;
+
+  }
+  &-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+  }
+}
+.popup__call {
+  display: none;
+  height: 100vh;
+  background-color: white ;
+  gap: 40px;
+  padding-left: 20px;
+  &-submit {
+    color: white;
+    background-color: $bgColor;
+    height: 32px;
+    width: 136px;
+    border-radius: 30px;
+    margin-left: auto;
+    font-family: $boldFont;
+
+  }
+  &-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    
+  }
+}
+
+.popup-input {
+  height: 48px;
+  width: 376px;
+  font-family: $basicFont;
+  color: black;
+  :active {
+    border: none;
+  }
+}
+
+.popup-input-text {
+  height: 118px;
+  width: 376px;
+}
+
+.popup__feedback.show {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  width: 450px;
+  gap: 30px;
+}
+
+.popup-heading {
+  font-family: $boldFont;
+  border-left: 6px solid $menuHoverColor;
+}
+
+.popup__call.show {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  width: 450px;
+}
+
+.section.blurred {
+  filter: blur(9px);
+  transition: 0.4s;
+}
+
+.section {
+  transition: 0.4s;
 }
