@@ -8,7 +8,7 @@ const closeButtonCall = document.querySelector('.popup__call-close');
 const pickFeedback = document.querySelector('.popup__feedback');
 const pickCall = document.querySelector('.popup__call');
 const background = document.querySelector('.section');
-
+const noAside = document.querySelector('.content')
 
 openButtonFeedback.addEventListener('click', () => {
   pickFeedback.classList.toggle('show');
@@ -56,6 +56,19 @@ const sidebarToggle = document.querySelector('.sidebar-toggle');
 
 if (sidebarToggle) {
   sidebarToggle.addEventListener('click', () => {
-    aside.classList.toggle('hidden');
+    sidebar.classList.toggle('hidden');
+    noAside.classList.toggle('blurred')
   });
 }
+
+const hiddenText = document.querySelector('.description__hidden-text');
+const readmoreButton = document.querySelector('.description__readmore');
+
+readmoreButton.addEventListener('click', () => {
+  hiddenText.classList.toggle('hidden');
+  if (hiddenText.classList.contains('hidden')) {
+    readmoreButton.textContent = 'Скрыть'; 
+  } else {
+    readmoreButton.textContent = 'Читать далее'; 
+  }
+});
