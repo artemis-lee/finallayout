@@ -31,27 +31,31 @@ closeButtonFeedback.addEventListener('click', () => {
   background.classList.remove('blurred');
 });
 
+  const hiddenItems = document.querySelectorAll('.brands-menu__cards__hidden');
+  const buttonText = document.querySelector('.btn-text');
+  const iconBtn = document.querySelector('.icon');
+  const toggleButton = document.querySelector('.brands-menu__show-all');
 
-const hiddenItems = document.querySelectorAll('.menu .hidden');
-const buttonText = document.querySelector('.btn-text');
-const iconBtn = document.querySelector('.icon');
+  toggleButton.addEventListener('click', () => {
+    buttonText.innerText =
+      buttonText.innerText === 'Скрыть' ? 'Показать все' : 'Скрыть';
 
-function toggleMenu() {
-  buttonText.innerText =
-    buttonText.innerText === 'Скрыть' ? 'Показать все' : 'Скрыть';
+    hiddenItems.forEach((item) => {
+      item.style.display =
+        item.style.display === 'none' || item.style.display === ''
+          ? 'block'
+          : 'none';
+    });
 
-  hiddenItems.forEach((item) => {
-    item.style.display =
-      item.style.display === 'none' || item.style.display === ''
-        ? 'block'
-        : 'none';
+    iconBtn.classList.toggle('closed');
   });
+;
 
+const sidebar = document.querySelector('.sidebar');
+const sidebarToggle = document.querySelector('.sidebar-toggle');
 
-  if (iconBtn.className === 'icon') {
-    iconBtn.className = 'icon closed';
-  } else { 
-    iconBtn.className = 'icon';
-  }
-
+if (sidebarToggle) {
+  sidebarToggle.addEventListener('click', () => {
+    aside.classList.toggle('hidden');
+  });
 }

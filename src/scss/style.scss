@@ -13,6 +13,7 @@ body {
 }
 
 .content {
+  margin-left: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -24,16 +25,33 @@ body {
   }
 }
 
+.brands-menu__hidden-items {
+  display: flex;
+  flex-direction: row;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+h1 {
+  font-family: $boldFont;
+}
 
 .sidebar {
-  
-  font-family: TT-Lakes;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(0);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+  font-family: $basicFont;
   height: 100vh;
   color: #1B1C21;
   width: 270px; 
@@ -45,6 +63,19 @@ body {
   padding: 20px;
   font-size: 16px;
   margin-top: 20px;
+  &-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+  }
   &__header {
     padding-left: 20px;
     display: flex;
@@ -88,6 +119,20 @@ body {
     }
 
 }
+}
+
+.sidebar.hidden {
+  transform: translateX(-100%); 
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    &-toggle {
+      display: block;
+    }
+  }
+  
 }
 
 .header {
@@ -144,8 +189,7 @@ body {
   @include heading-style;
     &__cards {
       display: flex;
-      justify-content: space-between
-
+      gap: 155px;
     }
     &__show-all {
       display: flex;
@@ -169,7 +213,9 @@ body {
     grid-template-rows: auto;
     &__hidden {
       display: none;
+      
     }
+
   }
   &__show-all {
     display: flex;
@@ -186,7 +232,11 @@ body {
 
 }
 
-
+.brands-menu__hidden-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
 main {
   padding: 20px;
   background-color: #fff;
@@ -348,6 +398,9 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    span {
+      color: $bgColor;
+    }
     
   }
 }
@@ -357,6 +410,9 @@ footer {
   background-color: white ;
   gap: 40px;
   padding-left: 20px;
+  span {
+    color: $bgColor;
+  }
   &-submit {
     color: white;
     background-color: $bgColor;
@@ -371,9 +427,9 @@ footer {
     background: none;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
-    
+    margin-top: 20px; 
   }
+
 }
 
 .popup-input {

@@ -13,6 +13,7 @@
   <body>
     <div class="section">
       <aside class="sidebar">
+        <button class="sidebar-toggle">☰</button>
         <div class="sidebar__header">
           <div class="sidebar__header-image">
             <img src="img/aside/1.svg" alt="">
@@ -77,7 +78,7 @@
               Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
               <button class="description__readmore">
                 <img class="icon" src="img/main/pointers.svg" alt="">
-                <span class="btn-text">Читать далее</span>
+                <span class="btn-text-full">Читать далее</span>
             </button>
             </div>
             <div class="description__image">
@@ -113,20 +114,22 @@
                 <img src="img/main/13.svg" alt="">
               </div>
             </div>
-            <div class="brands-menu__cards__hidden">
-              <img src="img/main/10.svg" alt="">
-            </div>
-            <div class="brands-menu__cards__hidden">
-              <img src="img/main/11.svg" alt="">
-            </div>
-            <div class="brands-menu__cards__hidden">
-              <img src="img/main/12.svg" alt="">
-            </div>
-            <div class="brands-menu__cards__hidden">
-              <img src="img/main/13.svg" alt="">
-            </div>
+            <div class="brands-menu__hidden-items">
+              <div class="brands-menu__cards__hidden">
+                <img src="img/main/10.svg" alt="">
+              </div>
+              <div class="brands-menu__cards__hidden">
+                <img src="img/main/11.svg" alt="">
+              </div>
+              <div class="brands-menu__cards__hidden">
+                <img src="img/main/12.svg" alt="">
+              </div>
+              <div class="brands-menu__cards__hidden">
+                <img src="img/main/13.svg" alt="">
+              </div>
           </div>
-            <button onclick="toggleMenu()" class="brands-menu__show-all">
+            </div>
+            <button class="brands-menu__show-all">
               <img class="icon" src="img/main/pointers.svg" alt="">
               <span class="btn-text">Показать все</span>
           </button>
@@ -147,7 +150,7 @@
                 <img src="img/main/17.svg" alt="">
               </div>
             </div>
-            <button onclick="toggleMenu()" class="device-menu__show-all">
+            <button class="device-menu__show-all">
               <img class="icon" src="img/main/pointers.svg" alt="">
               <span class="btn-text">Показать все</span>
           </button>
@@ -263,6 +266,8 @@
       </p>
       <button class="popup__call-submit">ОТПРАВИТЬ ></button>
     </div>
+
+
   <script src="js/index.js"></script>
   </body>
 </html>
