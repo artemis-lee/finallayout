@@ -1,0 +1,24 @@
+
+
+@mixin heading-style {
+  font-family: $headingFont;
+  color: $headingColor;
+}
+
+@mixin h2-style {
+  font-family: $boldFont;
+  border-left: 4px solid $menuHoverColor;
+  padding-left: 15px;
+}
+
+@mixin templates {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
+@mixin tablet_templates {
+  display: grid;
+  grid-template-columns: (1fr 1fr 1fr);
+  grid-template-rows: auto;
+}

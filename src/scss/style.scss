@@ -1,15 +1,16 @@
 
-@import '/src/scss/fonts.scss';
-@import '/src/scss/variables.scss';
-@import '/src/scss/mixins.scss';
+@import '/src/scss/imports/fonts.scss';
+@import '/src/scss/imports/variables.scss';
+@import '/src/scss/imports/mixins.scss';
+@import '/src/scss/imports/media_breakpoints.scss';
 
 body {
   padding: 0;
   margin: 0;
   font-family: TT-Lakes;
-  background-color: #F8F8F8;
-  display: flex;
+  background-color: $backgroundColor;
   overflow-x: hidden;
+  display: flex;
 }
 
 .content {
@@ -29,11 +30,6 @@ body {
   }
 }
 
-.brands-menu__hidden-items {
-  display: flex;
-  flex-direction: row;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +46,7 @@ h1 {
   left: 0;
   height: 100vh;
   width: 250px;
-  background-color: #f4f4f4;
+  background-color: $sidebarColor;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transform: translateX(0);
   transition: transform 0.3s ease;
@@ -66,7 +62,6 @@ h1 {
   border-right: 2px solid #e0e0e0;
   padding: 20px;
   font-size: 16px;
-  margin-top: 20px;
   &.hidden {
     transform: translateX(10px);   
   } 
@@ -130,27 +125,24 @@ h1 {
 }
 }
 
-
-@media (max-width: 768px) {
-  .sidebar {
-    transform: translateX(-100%);
-    &-toggle {
-      display: block;
-    }
-  }
-  
+.mobile-heading {
+  @include h2-style;
+  margin-left: 10px;
+  display: none;
 }
 
 .header {
   align-items: center;
   justify-content: center;
   padding-bottom: 0px;
-  font-family: $boldFont;
   display: flex;
   text-align: center;
   justify-content: space-between;
   margin: 30px;
-  border-left: 5px solid $menuHoverColor;
+  @include h2-style;
+  &__button-768, &__768 {
+    display: none;
+  }
   &__button {
     display: flex;
     gap: 40px;
@@ -172,30 +164,39 @@ h1 {
       }
   
   }
+  &__button-768, &__logo-768 {
+    display: none;
+  }
 }
 
 .navbar {
   top: 100%;
-  width: 100%;
   padding: 10px;
   margin-left: 30px;
   text-align: center;
   border-bottom: 1px solid #ddd;  
   display: flex;
   flex-direction: row;
+  overflow-x: auto;
   gap: 80px;
   &__item:hover {
     transition: 0.2s;
     border: 3px solid $navHoverColor;
   }
 }
+.readmore-icon.closed {
+  transform: rotate(180deg);
+}
 
 .device-menu {
-  margin-top: 20px;
+  margin-top: $marginDefault;
   @include heading-style;
     &__cards {
-      display: flex;
-      gap: 155px;
+      @include templates;
+      padding-top: 20px;
+      &-hidden {
+        display: none;
+      }
     }
     &__show-all {
       display: flex;
@@ -212,11 +213,11 @@ h1 {
 }
 
 .brands-menu {
+  margin-top: $marginDefault;
   @include heading-style;
   &__cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+    @include templates;
+    padding-top: 20px;
     &__hidden {
       display: none;
       
@@ -238,14 +239,8 @@ h1 {
 
 }
 
-.brands-menu__hidden-items {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-}
 main {
   padding: 20px;
-  background-color: #fff;
   min-height: calc(100vh - 100px);
 }
 
@@ -284,9 +279,9 @@ main {
 }
 
 .service-table {
-  width: 100%;
+  margin-top: $marginDefault;
   border-collapse: collapse;
-  font-family: 'Arial', sans-serif;
+  font-family: $basicFont;
 
   &__header,
   &__row {
@@ -487,4 +482,73 @@ footer {
 
 .section {
   transition: 0.4s;
+}
+
+
+@include tablet {
+  .content {
+    width: 100vw;
+    margin: 0;
+  }
+  .header {
+    background-color: $sidebarColor;
+    border: none;
+    &__button {
+      display: none;
+    }
+    
+  .mobile-heading {
+    display: block;
+  }
+
+  .navbar {
+      overflow-x: auto;
+      height: auto;
+    }
+    h2 {
+      display: none;
+    }
+    &__button-768, &__768 {
+      justify-content: center;
+      display: flex;
+      gap: 15px;
+    }
+    &__logo-768 {
+      display: block;
+      margin-left: 30px;
+    }
+    span {
+      display: none;
+    }
+  }
+  .sidebar {
+    transform: translateX(-100%);
+    &-toggle {
+      display: block;
+    }
+  }
+  .description {
+    &__image {
+      width: 50vw;
+    }
+  }
+  .device-menu {
+    &__cards {
+      @include tablet_templates
+    } 
+  }
+
+  .brands-menu {
+    &__cards {
+      @include tablet_templates
+    }
+  }
+
+  .service-table {
+    width: 100vw;
+  }
+}
+
+@include mobile {
+  
 }
