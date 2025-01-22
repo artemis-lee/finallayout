@@ -94,3 +94,4 @@ readmoreButton.addEventListener('click', () => {
     readmoreIcon.classList.toggle('closed');
   }
 });
+
