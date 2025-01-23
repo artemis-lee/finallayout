@@ -9,8 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title></title>
     <link rel="stylesheet" href="scss/style.scss">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/src/swiper/swiper.min.css">
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="section">
@@ -204,7 +208,28 @@
               <img class="icon" src="img/main/pointers.svg" alt="">
               <span class="btn-text">Показать все</span>
              </button>
-          <div class="device-menu">
+             <div class="wrapper">
+              <div class="device__slider">
+                <div class="device__slider-wrapper">
+                  <div class="device__slide">
+                    <div class="device__image"><img src="img/main/14.svg" alt=""></div>
+                  </div>
+                  <div class="device__slide">
+                    <div class="device__image"><img src="img/main/14.svg" alt=""></div>
+                  </div>
+                  <div class="device__slide">
+                    <div class="device__image"><img src="img/main/14.svg" alt=""></div>
+                  </div>
+                  <div class="device__slide">
+                    <div class="device__image"><img src="img/main/14.svg" alt=""></div>
+                  </div>
+                  <div class="device__slide">
+                    <div class="device__image"><img src="img/main/14.svg" alt=""></div>
+                  </div>
+                </div>
+              </div>
+             </div>
+             <div class="device-menu">
             <h3>РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h3>
             <div class="device-menu__cards">
               <div class="device-menu__item">
@@ -237,6 +262,28 @@
               <img class="device-icon" src="img/main/pointers.svg" alt="">
               <span class="device-btn-text">Показать все</span>
           </button>
+          </div>
+          <div class="wrapper">
+            <div class="service-table__slider">
+              <div class="service-table_wrapper">
+                <div class="service-table__slide">
+                  <div class="service-table__image"><img src="/src/img/aside/chat.svg" alt=""></div>
+                </div>
+                <div class="service-table__slide">
+                  <div class="service-table__image"><img src="" alt=""></div>
+                </div>
+                <div class="service-table__slide">
+                  <div class="service-table__image">
+                    <img src="" alt=""></div>
+                </div>
+                <div class="service-table__slide">
+                  <div class="service-table__image"><img src="" alt=""></div>
+                </div>
+                <div class="service-table__slide">
+                  <div class="service-table__image"><img src="" alt=""></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="service-table">
             <div class="service-table__header">
@@ -350,8 +397,10 @@
       <button class="popup__call-submit">ОТПРАВИТЬ ></button>
     </div>
   <script src="js/index.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="/src/swiper/swiper.min.js"></script>
+  
+<script type="module">
+  import swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.2.1/+esm'
+  </script>
   </body>
 </html>
  

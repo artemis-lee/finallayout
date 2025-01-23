@@ -1,5 +1,5 @@
 import '../scss/style.scss';
-
+import Swiper from 'swiper';
 // popup variables
 const openButtonFeedback = document.querySelector('.header__button-feedback');
 const openButtonCall = document.querySelector('.header__button-call');
