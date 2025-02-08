@@ -95,14 +95,13 @@ readmoreButton.addEventListener('click', () => {
   }
 });
 
-new Swiper (".brands__slider", {
-  slidesPerView: 1,
-  navigation: {
-    nextEl: "swiper-button-next",
-    prevEl: "swiper-button-prev",
-  },
+const swiper = new Swiper('.swiper', {
+  slidesPerView: '1',
+  spaceBetween: 20, 
+  centeredSlides: false,
   pagination: {
-    el: "swiper-pagination",
+    el: '.swiper-pagination',
     clickable: true,
   },
-})
+  loop: false,
+});
