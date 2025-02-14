@@ -140,6 +140,12 @@ h1 {
   justify-content: space-between;
   margin: 30px;
   @include h2-style;
+  .mobile-logo {
+    display: none;
+  }
+    .mobile-heading {
+      display: none;
+    }
   &__button-768, &__768 {
     display: none;
   }
@@ -387,6 +393,7 @@ footer {
 }
 
 .popup__feedback {
+  max-width: 100%;
   display: none;
   height: 100vh;
   background-color: white;
@@ -506,11 +513,27 @@ footer {
   padding-top: 20px;
   padding-bottom: 20pxр;
   width: 250px;
-  height: auto;
   margin: 0;
-  
+  &-pagination {
+    margin-top: 80px;
+  }
 }
 
+.brands-swiper {
+  height: 125px;
+}
+.devices-swiper {
+  height: 220px;
+}
+.prices-swiper {
+  height: 240px;
+}
+.header__768 {
+  button {
+    background: none;
+    border: none;
+  }
+}
 
 @include tablet {
   .content {
@@ -525,9 +548,9 @@ footer {
     }
     
   .mobile-heading {
-    display: block;
+    display: block !important;
   }
-  
+
   .description {
     flex-direction: row;
   }
@@ -584,11 +607,49 @@ footer {
   body {
     width: 100vw;
   }
+      
+  .mobile-heading {
+    display: block !important;
+  }
+  
   .content{
     margin: 0;
   }
-  .header {
-    padding-left: 60px;
+  .navbar {
+    overflow-x: auto;
+  }
+  header {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+    padding-left: 70px;
+    h2{
+      display: none;
+      border: none;
+    }
+    button {
+      padding-left: 70px;
+      span {
+        display: none;
+      }
+    }
+  }
+  .header__768 {
+    display: flex !important;
+    flex-direction: row;
+    width: 150px;
+    .divider {
+      display: none;
+    }
+    button {
+      border: none;
+      background: none;
+    }
+  }
+  .header__button {
+    display: none;
   }
   .description {
     display: flex;
@@ -614,7 +675,7 @@ footer {
   }
 
   .swipers {
-    display: block;
+    display: flex;
   }
 }
 

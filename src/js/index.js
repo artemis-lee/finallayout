@@ -1,5 +1,5 @@
 import '../scss/style.scss';
-import Swiper from 'swiper';
+
 // popup variables
 const openButtonFeedback = document.querySelector('.header__button-feedback');
 const openButtonCall = document.querySelector('.header__button-call');
@@ -7,6 +7,8 @@ const closeButtonFeedback = document.querySelector('.popup__feedback-close');
 const closeButtonCall = document.querySelector('.popup__call-close');
 const pickFeedback = document.querySelector('.popup__feedback');
 const pickCall = document.querySelector('.popup__call');
+const openButtonFeedback720 = document.querySelector('.call__720')
+const openButtonCall720 = document.querySelector('.repair_720')
 
 // sidebar toggle variables
 const background = document.querySelector('.section');
@@ -42,7 +44,8 @@ function closePopup (popup) {
 }
 openButtonFeedback.addEventListener('click', () => blurBackground (pickFeedback));
 openButtonCall.addEventListener('click', () => blurBackground (pickCall));
-
+openButtonCall720.addEventListener('click', () => blurBackground (pickCall))
+openButtonFeedback720.addEventListener('click', () => blurBackground (pickFeedback));
 
 closeButtonCall.addEventListener('click', () => closePopup (pickCall));
 closeButtonFeedback.addEventListener('click', () => closePopup (pickFeedback));
@@ -87,21 +90,27 @@ if (sidebarToggle) {
 
 readmoreButton.addEventListener('click', () => {
   hiddenText.classList.toggle('hidden');
-  if (hiddenText.classList.contains('hidden')) {
-    readmoreButton.textContent = 'Скрыть';
-  } else {
-    readmoreButton.textContent = 'Читать далее';
-    readmoreIcon.classList.toggle('closed');
-  }
+  readmoreIcon.classList.toggle('closed'); // Переключаем всегда
+  
+  readmoreButton.textContent = hiddenText.classList.contains('hidden') 
+    ? 'Читать далее' 
+    : 'Скрыть';
 });
-
-const swiper = new Swiper('.swiper', {
-  slidesPerView: '1',
-  spaceBetween: 20, 
-  centeredSlides: false,
+const swiperOptions = {
   pagination: {
     el: '.swiper-pagination',
-    clickable: true,
+    clickable: true
   },
-  loop: false,
+  simulateTouch: true,
+
+  touchRatio: 1,
+
+  touchAngle: 45,
+
+  grabCursor: true,
+
+  slidesPerView: 'auto'
+}
+const swiper = new Swiper('.swiper', {
+  ...swiperOptions
 });
