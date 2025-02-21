@@ -138,7 +138,7 @@ h1 {
   display: flex;
   text-align: center;
   justify-content: space-between;
-  margin: 30px;
+  padding: 20px;
   @include h2-style;
   .mobile-logo {
     display: none;
@@ -177,20 +177,25 @@ h1 {
 
 .navbar {
   top: 100%;
-  padding: 10px;
+  padding: 20px 10px 0px 10px;
   margin-left: 30px;
   text-align: center;
-  border-bottom: 1px solid #ddd;  
   display: flex;
   flex-direction: row;
   overflow-x: auto;
   gap: 80px;
+  &__item {
+    min-width: 220px;
+  }
   &__item:hover {
     transition: 0.2s;
     border: 3px solid $navHoverColor;
   }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
-.readmore-icon.closed {
+.readmore-icon.closed, .icon.closed, .device-icon.closed {
   transform: rotate(180deg);
 }
 
@@ -429,6 +434,7 @@ footer {
 }
 .popup__call {
   display: none;
+  max-width: 100%;
   height: 100vh;
   background-color: white ;
   gap: 40px;
@@ -534,6 +540,9 @@ footer {
     border: none;
   }
 }
+.table-comment {
+  width: 430px;
+}
 
 @include tablet {
   .content {
@@ -546,7 +555,10 @@ footer {
     &__button {
       display: none;
     }
-    
+  .right-part {
+    display: flex;
+    gap: 40px;
+  }
   .mobile-heading {
     display: block !important;
   }
@@ -569,7 +581,7 @@ footer {
     }
     &__logo-768 {
       display: block;
-      margin-left: 30px;
+      margin-left: 70px;
     }
     span {
       display: none;
@@ -577,6 +589,9 @@ footer {
   }
   .sidebar {
     transform: translateX(-100%);
+    &__header-logo {
+      padding-left: 30px;
+    }
     &-toggle {
       display: block;
     }
@@ -614,6 +629,14 @@ footer {
   
   .content{
     margin: 0;
+    width: 100vw;
+  }
+  .sidebar {
+    &__header {
+      &-logo {
+        padding-left: 30px;
+      }
+    }
   }
   .navbar {
     overflow-x: auto;
@@ -630,11 +653,15 @@ footer {
       border: none;
     }
     button {
-      padding-left: 70px;
+      padding-left: 20px;
       span {
         display: none;
       }
     }
+    .mobile-logo {
+      display: block !important;
+      margin-left: 70px;
+      }
   }
   .header__768 {
     display: flex !important;
@@ -655,7 +682,7 @@ footer {
     display: flex;
     flex-direction: column;
     &__text {
-      max-width: 100%;
+      max-width: 100% ;
       font-size: 14px;
     }
     &__image {
@@ -664,18 +691,21 @@ footer {
   }
   .sidebar {
     transform: translate(-100%);
-    width: 100vw;
     margin: 0;
     &-toggle {
       display: block;
     }
   }
-  .device-menu, .brands-menu, .service-table, .brands-menu__show-all, .table-comment {
+  .device-menu, .brands-menu, .service-table, .brands-menu__show-all {
     display: none;
   }
 
   .swipers {
     display: flex;
+  }
+
+  .table-comment {
+    width: 320px;
   }
 }
 

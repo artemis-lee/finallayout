@@ -20,7 +20,7 @@ const sidebarToggle = document.querySelector('.sidebar-toggle');
 const hiddenText = document.querySelector('.description__hidden-text');
 const readmoreButton = document.querySelector('.description__readmore');
 const readmoreIcon = document.querySelector('.readmore-icon')
-
+const readMoreLabel = document.querySelector ('.btn-text-full')
 // hidden brands items variables
 const buttonText = document.querySelector('.btn-text');
 const iconBtn = document.querySelector('.icon');
@@ -75,7 +75,7 @@ toggleDeviceButton.addEventListener('click', () => {
         ? 'block'
         : 'none';
   });
-  iconBtn.classList.toggle('closed');
+  iconDeviceBtn.classList.toggle('closed')
 });
 
 
@@ -92,10 +92,14 @@ readmoreButton.addEventListener('click', () => {
   hiddenText.classList.toggle('hidden');
   readmoreIcon.classList.toggle('closed'); // Переключаем всегда
   
-  readmoreButton.textContent = hiddenText.classList.contains('hidden') 
-    ? 'Читать далее' 
-    : 'Скрыть';
+  if (hiddenText.classList.contains('hidden')) {
+    readMoreLabel.textContent = 'Скрыть';
+  }
+  else {
+    readMoreLabel.textContent = 'Читать далее';
+  }
 });
+
 const swiperOptions = {
   pagination: {
     el: '.swiper-pagination',
