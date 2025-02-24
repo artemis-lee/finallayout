@@ -9,12 +9,13 @@ body {
   padding: 0;
   margin: 0;
   font-family: TT-Lakes;
-  background-color: $backgroundColor;
   overflow-x: hidden;
+  background-color: $backgroundColor;
   display: flex;
 }
 
 .content {
+  max-width: 1120px;
   margin-left: 340px;
   display: flex;
   flex-direction: column;
@@ -560,7 +561,7 @@ footer {
     gap: 40px;
   }
   .mobile-heading {
-    display: block !important;
+    display: flex !important;
   }
 
   .description {
@@ -629,7 +630,7 @@ footer {
   
   .content{
     margin: 0;
-    width: 100vw;
+    width: 100%;
   }
   .sidebar {
     &__header {
@@ -659,8 +660,11 @@ footer {
       }
     }
     .mobile-logo {
-      display: block !important;
+      display: flex !important;
       margin-left: 70px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       }
   }
   .header__768 {
